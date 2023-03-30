@@ -1,8 +1,7 @@
 dashboard "project_detail" {
-  title = "GitLab Project Detail"
-  tags  = merge(local.project_common_tags, {
-    type = "Detail"
-  })
+  title         = "GitLab Project Detail"
+  tags          = merge(local.project_common_tags, {type = "Detail"})
+  documentation = file("./dashboards/project/docs/project_detail.md")
 
   input "project_id" {
     placeholder = "Select a project"

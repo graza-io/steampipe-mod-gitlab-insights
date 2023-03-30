@@ -1,8 +1,7 @@
 dashboard "project_dashboard" {
-  title = "GitLab Project Dashboard"
-  tags  = merge(local.project_common_tags, {
-    type = "Dashboard"
-  })
+  title         = "GitLab Project Dashboard"
+  tags          = merge(local.project_common_tags, {type = "Dashboard"})
+  documentation = file("./dashboards/project/docs/project_dashboard.md")
 
   container {
     title = "Key Information"

@@ -1,8 +1,7 @@
 dashboard "group_dashboard" {
-  title = "GitLab Group Dashboard"
-  tags  = merge(local.group_common_tags, {
-    type = "Dashboard"
-  }) 
+  title         = "GitLab Group Dashboard"
+  tags          = merge(local.group_common_tags, {type = "Dashboard"}) 
+  documentation = file("./dashboards/group/docs/group_dashboard.md")
 
   container {
     card {

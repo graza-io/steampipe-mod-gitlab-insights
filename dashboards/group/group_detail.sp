@@ -1,8 +1,7 @@
 dashboard "group_detail" {
-  title = "GitLab Group Detail"
-  tags  = merge(local.group_common_tags, {
-    type = "Detail"
-  })
+  title         = "GitLab Group Detail"
+  tags          = merge(local.group_common_tags, {type = "Detail"})
+  documentation = file("./dashboards/group/docs/group_detail.md")
 
   input "group_id" {
     placeholder = "Select a Group"
